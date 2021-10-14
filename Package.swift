@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "use-argument-parser",
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
+        .package(url: "https://github.com/yonihemi/swift-argument-parser", .branch("swiftwasm-support")),
     ],
     targets: [
         .executableTarget(
