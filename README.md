@@ -7,7 +7,7 @@ Minimal package for testing [Swift Argument Parser](https://github.com/apple/swi
 
 # Build and Run
 ```sh
-/Library/Developer/Toolchains/swift-wasm-5.5-SNAPSHOT-2021-10-13-a.xctoolchain/usr/bin/swift build --triple wasm32-unknown-wasi -Xswiftc -lFoundation -Xswiftc -lCoreFoundation -Xswiftc -licui18n -c release
+/Library/Developer/Toolchains/swift-wasm-5.5-SNAPSHOT-2021-10-28-a.xctoolchain/usr/bin/swift build --triple wasm32-unknown-wasi -Xswiftc -lFoundation -Xswiftc -lCoreFoundation -Xswiftc -licui18n -c release
 
 wasmer .build/wasm32-unknown-wasi/release/use-argument-parser.wasm -- hello -c 3
 # or
