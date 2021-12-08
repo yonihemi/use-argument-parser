@@ -2,13 +2,13 @@
 
 set -ex
 
-SNAPSHOT=swift-wasm-5.5-SNAPSHOT-2021-10-28-a
-TOOLCHAIN=/Library/Developer/Toolchains/$SNAPSHOT.xctoolchain
+RELEASE_TAG=swift-wasm-5.5.0-RELEASE
+TOOLCHAIN=/Library/Developer/Toolchains/$RELEASE_TAG.xctoolchain
 
 install_toolchain() {
 if [ ! -e $TOOLCHAIN ]; then
-  PKG_FILENAME=$SNAPSHOT-macos_$(uname -m).pkg
-  TOOLCHAIN_URL=https://github.com/swiftwasm/swift/releases/download/$SNAPSHOT/$PKG_FILENAME
+  PKG_FILENAME=$RELEASE_TAG-macos_$(uname -m).pkg
+  TOOLCHAIN_URL=https://github.com/swiftwasm/swift/releases/download/$RELEASE_TAG/$PKG_FILENAME
   curl -L -C - "$TOOLCHAIN_URL" -o /tmp/$PKG_FILENAME
   sudo installer -pkg /tmp/$PKG_FILENAME -target /
 fi
