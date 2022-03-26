@@ -5,13 +5,13 @@ import PackageDescription
 let package = Package(
     name: "use-argument-parser",
     dependencies: [
-        .package(url: "https://github.com/yonihemi/swift-argument-parser", .branch("swiftwasm-support")),
+        .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMinor(from: "1.1.1")),
     ],
     targets: [
         .executableTarget(
             name: "use-argument-parser",
             dependencies: [
-				.product(name: "ArgumentParser", package: "swift-argument-parser"),
-			]),
+              .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            ]),
     ]
 )
