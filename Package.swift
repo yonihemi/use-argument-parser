@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "use-argument-parser",
+    products: [
+      .executable(name: "use-argument-parser", targets: ["use-argument-parser"]),
+    ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMinor(from: "1.1.1")),
     ],
